@@ -1,5 +1,7 @@
 package com.evandromurilo.quiz;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -38,6 +40,8 @@ public class Question {
     }
 
     public static void generateQuestions() {
+        if (!questionList.isEmpty()) return;
+
         questionList.add(new Question("Com quantos anos Dom Pedro II foi coroado imperador do Brasil?",
                 "14 anos",
                 "24 anos",
@@ -50,8 +54,22 @@ public class Question {
                 "Bronstrup",
                 "Broesntrup",
                 "Bronstroup"));
-
-        shuffleQuestions();
+        questionList.add(new Question("Autor do livro O Hobbit:",
+                "J. R. R. Tolkien",
+                "C. S. Lewis",
+                "Sir Arthur Conan Doyle"));
+        questionList.add(new Question("Espécie de roedor também conhecido como \"Esquilo da Mongólia\":",
+                "Gerbil",
+                "Topolino",
+                "Degu"));
+        questionList.add(new Question("Qual dessas franquias não pertence à Nintendo?",
+                "Harvest Moon",
+                "Fire Emblem",
+                "F-Zero"));
+        questionList.add(new Question("Sistema operacional mais utilizado no mundo:",
+                "Android",
+                "Windows",
+                "Solaris"));
     }
 
     public static void shuffleQuestions() {
