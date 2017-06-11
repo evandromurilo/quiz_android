@@ -154,8 +154,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (currLives < 0) {
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
+            Intent intent = new Intent(this, WinActivity.class);
+            intent.putExtra("score", currScore);
+            startActivity(intent);
         }
         else {
             setQuestion();
