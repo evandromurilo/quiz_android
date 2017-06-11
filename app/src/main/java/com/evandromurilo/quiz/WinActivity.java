@@ -25,10 +25,6 @@ public class WinActivity extends AppCompatActivity implements View.OnClickListen
         textScore.setText("Score: " + bundle.getInt("score"));
 
         buttonPlayAgain.setOnClickListener(this);
-
-        MediaPlayer mediaPlayer = MediaPlayer.create(WinActivity.this, R.raw.achievement);
-        mediaPlayer.setOnCompletionListener(this);
-        mediaPlayer.start();
     }
 
     @Override
